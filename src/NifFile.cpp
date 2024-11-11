@@ -4500,7 +4500,7 @@ void NifFile::CreateSkinning(NiShape* shape) {
 				nifSkinPartition->bMappedIndices = false;
 				int partID = hdr.AddBlock(std::move(nifSkinPartition));
 
-				auto nifDismemberInst = std::make_unique<BSDismemberSkinInstance>();
+				auto nifDismemberInst = std::make_unique<NiSkinInstance>();
 
 				nifDismemberInst->dataRef.index = skinDataID;
 				nifDismemberInst->skinPartitionRef.index = partID;
